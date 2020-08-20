@@ -1,0 +1,20 @@
+{% extends "taskapp/layout.html" %}
+{% block title %}
+    view task
+{% endblock %}
+
+{% block body %}
+
+     <h1 class="heading">
+          No of Tasks :
+         <ol>
+             {% for task in tasks %}
+                <li> {{ task }} </li>
+             {% endfor %}
+         </ol>
+     </h1>
+     <h1 class="heading"> add task </h1>
+
+
+
+{% endblock %}

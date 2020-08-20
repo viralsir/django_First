@@ -19,5 +19,12 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/',include("hello.urls")),
-    path('newyear/',include("newyear.urls"))
+    path('newyear/',include("newyear.urls")),
+    path("taskapp/",include("taskapp.urls"))
 ]
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+if settings.DEBUG :
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

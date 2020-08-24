@@ -1,4 +1,5 @@
 {% extends "taskapp/layout.html" %}
+
 {% block title %}
     add task
 {% endblock %}
@@ -8,8 +9,9 @@
         <h1 class="heading">
          Add Task :
         </h1>
-        <input type="text" name="task" size="20" >
-        <input type="submit" value="addtask">
+        {{ form }}
+
+        <input type="submit" value="addtask" class="btn btn-outline-info" >
     </form>
 
 {% endblock %}

@@ -20,7 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/',include("hello.urls")),
     path('newyear/',include("newyear.urls")),
-    path("taskapp/",include("taskapp.urls"))
+    path("taskapp/",include("taskapp.urls")),
+    path("blog/",include("blog.urls"))
 ]
 
 from django.conf import settings

@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'hello',
     'newyear',
+    "blog",
     'taskapp.apps.TaskappConfig',
     'django.contrib.admin',
     'django.contrib.auth',

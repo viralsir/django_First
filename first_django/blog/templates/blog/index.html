@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script>
+       $(document).ready(function() {
+            $('#example').DataTable({
+                "ajax": {
+                        "url": "/blog/jsonview",
+                        "dataType": "json"
+                },
+                 columns: [
+                            { data: 'title' },
+                            { data :'author'},
+                            { data: 'content' }
+
+                        ]
+            });
+        } );
+    </script>
+
+</head>
+<body>
+     <table  id="example">
+         <thead>
+            <th> title</th>
+            <th> author</th>
+            <th> content</th>
+         </thead>
+         <tbody>
+
+         </tbody>
+     </table>
+
+</body>
+</html>
